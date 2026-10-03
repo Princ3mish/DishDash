@@ -415,21 +415,6 @@ Expected: HTTP 404 `NOT_FOUND` and HTTP 400 `INVALID_JSON`.
 
 ---
 
-## Verification Results
-
-| Check | How verified | Status |
-| --- | --- | --- |
-| Setup and reseed | Automated test script | Verified (automated) |
-| Drafts before Save | Manual browser verification | Verified (browser) |
-| Invalid publish rejected incl. image URL | Automated test script | Verified (automated) |
-| Concurrency, 10 simultaneous PATCH requests | Automated test script (1 success, 9 conflicts) | Verified (automated, 1 success and 9 conflicts) |
-| Persistence across backend restart and database restart | Automated test script | Verified (automated) |
-| Two-tab conflict with draft preserved | Manual browser verification | Verified (browser) |
-| Failed save | Automated test script | Not yet verified |
-| External updates polling bonus | Automated test script | Not yet verified |
-
----
-
 ## Optional Bonus: External Updates
 
 External update synchronization is implemented using client-side background polling at 4-second intervals (`POLL_INTERVAL_MS = 4000` in `useDishes.ts`):
