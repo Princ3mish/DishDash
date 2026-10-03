@@ -1,0 +1,11 @@
+services:
+  db:
+    image: mongo:7
+    container_name: nosh-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - nosh-mongodata:/data/db
+
+volumes:
+  nosh-mongodata:
